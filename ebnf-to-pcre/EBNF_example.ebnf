@@ -1,0 +1,14 @@
+(* 
+	This is an example EBNF file for testing reasons
+*)
+(*
+	Lacking the patience for writing down 62 characters manually, the
+	characters can be defined in specials as regular expressions.
+*)
+
+letters = ?/[a-zA-Z]/?;
+word = { letters };
+whitespaces = ?/\s/?;
+sentance = { word, [ whitespaces ] };
+with_punct = sentance, ".";
+
